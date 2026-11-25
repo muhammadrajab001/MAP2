@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Харитаи сохторҳои хизматрасонӣ</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+    <section class="page-title">
+        <div>
+            <span class="subtitle">Системаи иттилоотӣ</span>
+            <h1>Харитаи сохторҳои хизматрасонӣ</h1>
+            <p>
+                Ҷустуҷӯ ва муайян намудани ҷойгиршавии
+                сохторҳои хизматрасонӣ дар Ҷумҳурии Тоҷикистон.
+            </p>
+        </div>
+    </section>
+
+    <section class="statistics">
+
+        <div class="stat">
+            <span>Ҳамаи объектҳо</span>
+            <strong id="totalCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Хадамоти марказӣ</span>
+            <strong id="khadamatCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Раёсатҳо</span>
+            <strong id="raesatCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Шуъбаҳо</span>
+            <strong id="shubaCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Нуқтаҳои баркашонӣ</span>
+            <strong id="cargoCount">0</strong>
+        </div>
+
+    </section>
+
+    <section class="map-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+
+                <h2>Ҷустуҷӯи сохторҳо</h2>
+
+                <label for="category">Категория</label>
+
+                <select id="category">
+                    <option value="all">Ҳамаи сохторҳо</option>
+                    <option value="khadamat">Хадамоти марказӣ</option>
+                    <option value="raesat">Раёсатҳо</option>
+                    <option value="shuba">Шуъбаҳо</option>
+                    <option value="sarhad">Сарҳадҳо</option>
+                    <option value="barkashoni">Боркашонӣ</option>
+                </select>
+
+                <label for="search">Ҷустуҷӯ</label>
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Номи объектро ворид кунед..."
+                >
+
+                <label for="region">Минтақа</label>
+
+                <select id="region">
+                    <option value="all">Ҳамаи минтақаҳо</option>
+                    <option value="Душанбе">Душанбе</option>
+                    <option value="Суғд">Суғд</option>
+                    <option value="Хатлон">Хатлон</option>
+                    <option value="ВМКБ">ВМКБ</option>
+                    <option value="НТМ">НТМ</option>
+                </select>
+
+                <button id="resetFilters" type="button">
+                    Тоза кардани филтрҳо
+                </button>
+
+            </div>
+
+            <div class="results-header">
+                <h3>Рӯйхати объектҳо</h3>
+                <span id="resultCount">0</span>
+            </div>
+
+            <div id="places" class="places"></div>
+
+        </aside>
+
+        <div class="map-area">
+
+            <div class="map-label">
+                📍 Ҷумҳурии Тоҷикистон
+            </div>
+
+            <div id="map"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
