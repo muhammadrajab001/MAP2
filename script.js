@@ -1,10 +1,11 @@
 
 const locations = [
     {
-        name: "Хадамоти танзим дар соҳаи нақлиёт",
+        name: "ХАДАМОТИ ДАВЛАТИИ НАЗОРАТ ВА ТАНЗИМ ДАР СОҲАИ НАҚЛИЁТ",
         category: "khadamat",
         region: "Душанбе",
         address: "Шаҳри Душанбе",
+        call: " (+992) 372363534",
         lat: 38.5598,
         lng: 68.7870
     },
@@ -13,6 +14,7 @@ const locations = [
         category: "raesat",
         region: "Душанбе",
         address: "Шаҳри Душанбе",
+        call: " (+992) 372363534",
         lat: 38.5598,
         lng: 68.7870
     },
@@ -511,8 +513,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const address = document.createElement("p");
             address.textContent = "Суроға: " + item.address;
-
-            popup.append(title, category, region, address);
+            const call = document.createElement("p");
+            address.textContent = "Тамос:" + item.call 
+            popup.append(title, category, region, address,call);
 
             marker.bindPopup(popup);
             marker.addTo(markerLayer);
