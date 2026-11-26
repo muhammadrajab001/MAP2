@@ -407,10 +407,10 @@ const locations = [
 ];
 
 const categoryNames = {
-    khadamat: "Хадамоти марказӣ",
+    khadamat: "Дастгоҳи марказӣ",
     raesat: "Раёсатҳо",
     barkashoni: "Чойгиршавии нуқтаҳои баркашии",
-    sarhad: "ГУЗАРГОҲҲОИ САРҲАДӢ"
+    sarhad: "Гузаргоҳҳои сарҳадӣ"
 };
 
 document.addEventListener("DOMContentLoaded", function () {
